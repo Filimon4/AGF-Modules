@@ -8,16 +8,21 @@ local TestController = {}
 
 
 function TestController:Start()
-	print('Test Controller Started')
-	self.Controllers.TestEventController:Say("I am here")
+	-- print('Test Controller Started')
+	-- self.Controllers.TestEventController:Say("I am here")
 
-    wait(1)
-    self:FireEvent('Test', 'This is a test')
+	local test = self.Modules.TestModule
+	self.Shared.Thread.Spawn(function()
+		print("Spawned a new thread")
+	end)
+
+    -- wait(1)
+    -- self:FireEvent('Test', 'This is a test')
 end
 
 
 function TestController:Init()
-	self:RegisterEvent('Test')
+	--self:RegisterEvent('Test')
 end
 
 

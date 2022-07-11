@@ -8,10 +8,10 @@ local AnotherService = {Client = {}}
 
 
 function AnotherService:Start()
-	self.Services.MyService:SayHello("Efim2")
-    self.Services.MyService:ConnectEvent("Hello",function(mes)
-        print("Received hello message: " .. mes)
-    end)
+	--self.Services.MyService:SayHello("Efim2")
+    -- self.Services.MyService:ConnectEvent("Hello",function(mes)
+    --     print("Received hello message: " .. mes)
+    -- end)
 end
 
 
