@@ -6,17 +6,22 @@
 
 local MyService = {Client = {}}
 
+local EVENT_HELLO = "Hello"
+
 function MyService:SayHello(name)
     print("Helloy, "..name.."!")
 end
 
 function MyService:Start()
-	self:SayHello("Efim")
+    for i = 1,10 do
+        wait(0.1)
+        self:FireEvent(EVENT_HELLO, "Hello "..i)
+    end
 end
 
 
 function MyService:Init()
-	
+	self:RegisterEvent(EVENT_HELLO)
 end
 
 
