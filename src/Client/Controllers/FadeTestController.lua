@@ -30,15 +30,13 @@ function FadeTestController:Text(Fade)
     print("Set Text")
     -- // Text Settings // --
     Fade:SetText("Hello world")
-    -- print("Clear Text")
-    -- Fade:ClearText()
     print("Set Size")
     Fade:SetTextSize(25)
     print("Font")
     Fade:SetFont(Enum.Font.FredokaOne)
     print("Text Color")
     Fade:SetTextColor(Color3.new(0, 0.6, 1))
-
+    
     --// Commands // --
     local gui = Fade:GetScreenGui()
     print(gui)
@@ -46,6 +44,9 @@ function FadeTestController:Text(Fade)
     print(frame)
     local label = Fade:GetLabel()
     print(label)
+
+    print("Clear Text")
+    Fade:ClearText()
 end
 
 function FadeTestController:Start()
