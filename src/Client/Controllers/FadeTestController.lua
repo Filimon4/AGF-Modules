@@ -17,10 +17,4 @@ function FadeTestController:Start()
     self.Controllers.Fade:In(0.5) -- false is mean that script does wait for end of animation
 end
 
-
-function FadeTestController:Init()
-	
-end
-
-
 return FadeTestController
