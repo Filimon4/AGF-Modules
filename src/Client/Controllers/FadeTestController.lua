@@ -19,19 +19,42 @@ function FadeTestController:To_FromTo(Fade)
     print('75%')
     Fade:To(0.75)
     task.wait(3)
-    print('From 75% to 100%')
+    print('Fade From 75% to 100%')
     Fade:FromTo(0.75,0)
     task.wait(3)
-    print('From 100% to 0%')
+    print('Fade From 100% to 0%')
     Fade:FromTo(0,1)
+end
+
+function FadeTestController:Text(Fade)
+    print("Set Text")
+    -- // Text Settings // --
+    Fade:SetText("Hello world")
+    -- print("Clear Text")
+    -- Fade:ClearText()
+    print("Set Size")
+    Fade:SetTextSize(25)
+    print("Font")
+    Fade:SetFont(Enum.Font.FredokaOne)
+    print("Text Color")
+    Fade:SetTextColor(Color3.new(0, 0.6, 1))
+
+    --// Commands // --
+    local gui = Fade:GetScreenGui()
+    print(gui)
+    local frame = Fade:GetFrame()
+    print(frame)
+    local label = Fade:GetLabel()
+    print(label)
 end
 
 function FadeTestController:Start()
     print('FadeController started')
     local Fade = self.Controllers.Fade
-    task.wait(10)
+    task.wait(6.5)
     --self:In_Out(Fade)
-    self:To_FromTo(Fade)
+    --self:To_FromTo(Fade)
+    --self:Text(Fade)
 end
 
 return FadeTestController
