@@ -55,6 +55,7 @@ function FadeTestController:Start()
     --self:In_Out(Fade)
     --self:To_FromTo(Fade)
     --self:Text(Fade)
+    print('FadeController finished')
 end
 
 return FadeTestController
