@@ -50,13 +50,17 @@ function FadeTestController:Text(Fade)
 end
 
 function FadeTestController:Start()
-    print('FadeController started')
+    warn('FadeController started')
     local Fade = self.Controllers.Fade
     task.wait(6.5)
+    -- // Functions
+
     --self:In_Out(Fade)
     --self:To_FromTo(Fade)
     --self:Text(Fade)
-    print('FadeController finished')
+
+    -- //
+    warn('FadeController finished')
 end
 
 return FadeTestController
