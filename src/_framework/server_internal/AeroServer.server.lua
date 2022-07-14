@@ -62,6 +62,7 @@ function AeroServer:Fire(eventName, ...)
 	self._events[eventName]:Fire(...)
 end
 
+
 function AeroServer:FireEvent(eventName, ...)
 	warn("FireEvent has been deprecated in favor of Fire")
 	self:Fire(eventName, ...)
