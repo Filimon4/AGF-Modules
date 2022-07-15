@@ -61,9 +61,22 @@ function UserInputTestController:MouseMethods(mouse)
     --self:MouseDelta(mouse) -- works only if mouse if lock, instead it will return a zero
     --self:LockInCenter(mouse)
     --self:Raycast(mouse)
-    self:RaycastFromXY(mouse)
+    --self:RaycastFromXY(mouse)
+    self:RaycastWithParams(mouse) -- in documentation there is methods Cast,CastWithIgnoreList and CastWithWhitelist. I will use Raycast methode, bsc it's just simpler
 
     -- //
+end
+
+function UserInputTestController:RaycastWithParams(mouse)
+    local distance = 1000
+    local RaycastParams = RaycastParams.new()
+    RaycastParams.FilterDescendantsInstances = {}
+    RaycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+
+    local ray = mouse:Raycast(RaycastParams, distance)
+    print(ray.Distance)
+    print(ray.Instance)
+    print(ray.Material)
 end
 
 function UserInputTestController:RaycastFromXY(mouse)
@@ -85,7 +98,8 @@ function UserInputTestController:RaycastFromXY(mouse)
 end
 
 function UserInputTestController:Raycast(mouse)
-    local ray = mouse:GetRay(1000) -- return Origin position and Dirction of the ray
+    local distance = 1000
+    local ray = mouse:GetRay(distance) -- return Origin position and Dirction of the ray
 
     --[[ Visual
     
