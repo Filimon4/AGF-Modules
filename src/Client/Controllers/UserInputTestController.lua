@@ -60,8 +60,27 @@ function UserInputTestController:MouseMethods(mouse)
     --self:Lock_Unlock(mouse)
     --self:MouseDelta(mouse) -- works only if mouse if lock, instead it will return a zero
     --self:LockInCenter(mouse)
+    self:Raycast(mouse)
 
     -- //
+end
+
+function UserInputTestController:Raycast(mouse)
+    local ray = mouse:GetRay(1000) -- return Origin position and Dirction of the ray
+
+    --[[ Visual
+    
+    local Originpart = Instance.new('Part',game.Workspace)
+    -- settings
+    Originpart.Transparency = 0.5
+    Originpart.Anchored = true
+    Originpart.CanCollide = false
+    Originpart.Name = 'Originpart'
+    -- Show
+    Originpart.BrickColor = BrickColor.new('Really red')
+    Originpart.Size = Vector3.new(0.5,0.5,ray.Direction.magnitude)
+    Originpart.CFrame = CFrame.new(ray.Origin, ray.Direction)
+    ]]--
 end
 
 function UserInputTestController:MousePosition(mouse)
