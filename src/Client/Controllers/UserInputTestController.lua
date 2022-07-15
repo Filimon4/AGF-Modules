@@ -74,9 +74,9 @@ function UserInputTestController:RaycastWithParams(mouse)
     RaycastParams.FilterType = Enum.RaycastFilterType.Blacklist
 
     local ray = mouse:Raycast(RaycastParams, distance)
-    print(ray.Distance)
-    print(ray.Instance)
-    print(ray.Material)
+    -- print(ray.Distance)
+    -- print(ray.Instance)
+    -- print(ray.Material)
 end
 
 function UserInputTestController:RaycastFromXY(mouse)
