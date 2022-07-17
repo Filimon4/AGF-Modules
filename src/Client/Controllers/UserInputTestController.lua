@@ -46,14 +46,14 @@ function UserInputTestController:Get(userinput)
     local gamepad = userinput:Get('Gamepad')
 
     -- Methods of input
-    self:MouseMethods(mouse)
+    self:MouseSettings(mouse)
 end
 
 -- //
 
 -- // Mouse Methods Example
 
-function UserInputTestController:MouseMethods(mouse)
+function UserInputTestController:MouseSettings(mouse)
     -- // Methods
 
     --self:MousePosition(mouse)
@@ -65,6 +65,47 @@ function UserInputTestController:MouseMethods(mouse)
     --self:RaycastWithParams(mouse) -- in documentation there is methods Cast,CastWithIgnoreList and CastWithWhitelist. I will use Raycast methode, bsc it's just simpler
 
     -- //
+
+    -- // Events
+
+    -- self:MouseClicks(mouse)
+    -- self:MouseMove(mouse)
+    -- self:MouseScroll(mouse)
+
+    -- //
+end
+
+function UserInputTestController:MouseMove(mouse)
+    mouse.Moved:Connect(function()
+        print('Mouse move')
+    end)
+end
+
+function UserInputTestController:MouseScroll(mouse)
+    mouse.Scrolled:Connect(function(amount)
+        print('Mouse scroll ' .. tostring(amount))
+    end)
+end
+
+function UserInputTestController:MouseClicks(mouse)
+    mouse.LeftDown:Connect(function()
+        print('Left down')
+    end)
+    mouse.LeftUp:Connect(function()
+        print('Left up')
+    end)
+    mouse.RightDown:Connect(function()
+        print('Right down')
+    end)
+    mouse.RightUp:Connect(function()
+        print('Right Up')
+    end)
+    mouse.MiddleDown:Connect(function()
+        print('Middle down')
+    end)
+    mouse.MiddleUp:Connect(function()
+        print('Middle Up')
+    end)
 end
 
 function UserInputTestController:RaycastWithParams(mouse)
