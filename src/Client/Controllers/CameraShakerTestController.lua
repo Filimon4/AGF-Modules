@@ -140,7 +140,7 @@ function CameraShakerTestController:Start()
     -- //
 
     -- These 2 versions are just for show you functions of modules. You can freely combine these 2 how ever you want and make amazing camera shake effect.
-    -- For my opinion it's much better and esier to use structure of PERSET_VERSION, bcs it's much better and esier
+    -- For my opinion it's much better and esier to use structure of PERSET_VERSION
 end
 
 return CameraShakerTestController
