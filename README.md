@@ -6,11 +6,11 @@ For now it's not finish product. In the repository there is only client modules:
 
 Module: <br />
     <br />Server
-        <br /><br />Modules
+        Modules
     <br />Client
-        <br /><br />Controller
-            <br /><br /><br />[UserInput](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/UserInputTestController.lua)
-            <br /><br /><br />[Fade](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/FadeTestController.lua)
-        <br /><br />Modules
-            <br /><br /><br />[CameraShaker](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/CameraShakerTestController.lua)
+        Controller
+            [UserInput](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/UserInputTestController.lua)
+            [Fade](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/FadeTestController.lua)
+     <br />Modules
+            [CameraShaker](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/CameraShakerTestController.lua)
     <br />Shared Modules
