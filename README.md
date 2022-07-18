@@ -3,4 +3,14 @@ Hi, i just wanna create scripts of all modules(Server/Client) in [AeroGameFramew
 <br /><br />
 For now it's not finish product. In the repository there is only client modules: Fade and UserInput.
 <br />
-Client modules in ./scr/Client/Controllers/_NameOfModule_TestController.
+
+Module:
+    Server
+        Modules
+    Client
+        Controller
+            [UserInput](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/UserInputTestController.lua)
+            [Fade](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/FadeTestController.lua)
+        Modules
+            [CameraShaker](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/CameraShakerTestController.lua)
+    Shared Modules
