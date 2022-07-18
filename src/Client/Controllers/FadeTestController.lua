@@ -7,45 +7,46 @@
 local FadeTestController = {}
 
 function FadeTestController:In_Out(Fade)
-    print("Fade In")
+    --1.
 	Fade:Out(2, true) -- true is mean that script doesn't wait for end of animation
+    
+    --2.
     task.wait(2)
-    print('Fade Out')
     Fade:In(0.5) -- false is mean that script does wait for end of animation
 end
 
 function FadeTestController:To_FromTo(Fade)
-    print('Fade To')
-    print('75%')
-    Fade:To(0.75)
+    --[[
+        0 - visible
+        1 - invisible
+    ]]--
+
+    --1.
+    Fade:To(0.75) -- Fade transperancy is 0.75
+    --2.
     task.wait(3)
-    print('Fade From 75% to 100%')
-    Fade:FromTo(0.75,0)
+    Fade:FromTo(0.75,0) -- Fade transperancy from 0.75 to 0
+    --3.
     task.wait(3)
-    print('Fade From 100% to 0%')
-    Fade:FromTo(0,1)
+    Fade:FromTo(0,1) -- Fade transperancy from 0 to 1
 end
 
 function FadeTestController:Text(Fade)
-    print("Set Text")
-    -- // Text Settings // --
-    Fade:SetText("Hello world")
-    print("Set Size")
-    Fade:SetTextSize(25)
-    print("Font")
-    Fade:SetFont(Enum.Font.FredokaOne)
-    print("Text Color")
-    Fade:SetTextColor(Color3.new(0, 0.6, 1))
+    -- // Text Settings
     
-    --// Commands // --
-    local gui = Fade:GetScreenGui()
-    print(gui)
-    local frame = Fade:GetFrame()
-    print(frame)
-    local label = Fade:GetLabel()
-    print(label)
+    Fade:SetText("Hello world")
+    Fade:SetTextSize(25)
+    Fade:SetFont(Enum.Font.FredokaOne)
+    Fade:SetTextColor(Color3.new(0, 0.6, 1))
 
-    print("Clear Text")
+    -- //
+
+    -- // Commands
+    local gui = Fade:GetScreenGui() -- get gui
+    local frame = Fade:GetFrame() -- get frame
+    local label = Fade:GetLabel() -- get label
+    -- //
+
     Fade:ClearText()
 end
 
@@ -60,7 +61,6 @@ function FadeTestController:Start()
     --self:Text(Fade)
 
     -- //
-    warn('FadeController finished')
 end
 
 return FadeTestController

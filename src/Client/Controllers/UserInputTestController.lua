@@ -123,19 +123,6 @@ end
 function UserInputTestController:RaycastFromXY(mouse)
     local ray = mouse:GetRayFromXY(331, 205) -- you just have to manualy write x and y cordinates
 
-    --[[ Visual
-
-    local Originpart = Instance.new('Part',game.Workspace)
-    -- settings
-    Originpart.Transparency = 0.5
-    Originpart.Anchored = true
-    Originpart.CanCollide = false
-    Originpart.Name = 'Originpart'
-    -- Show
-    Originpart.BrickColor = BrickColor.new('Really red')
-    Originpart.Size = Vector3.new(0.5,0.5,ray.Direction.magnitude)
-    Originpart.CFrame = CFrame.new(ray.Origin, ray.Direction
-    ]]--
 end
 
 function UserInputTestController:Raycast(mouse)
@@ -197,6 +184,5 @@ function UserInputTestController:Start()
     --self:Preferred_Changed(UserInput)
 
     -- //
-    warn("User Input Test Controller finished")
 end
 return UserInputTestController
