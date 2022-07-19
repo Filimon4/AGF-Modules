@@ -122,20 +122,19 @@ function UserInputTestController:RaycastWithParams(mouse)
     -- print(ray.Position)
 
     --[[ Visual Point of collide the ray with a part
+        local p = Instance.new("Part", game.Workspace)
+        p.Size = Vector3.new(math.random(1, 2),math.random(1, 2),math.random(1, 2))
+        p.Anchored = true
+        p.CanCollide = false
 
-    local p = Instance.new("Part", game.Workspace)
-    p.Size = Vector3.new(math.random(1, 2),math.random(1, 2),math.random(1, 2))
-    p.Anchored = true
-    p.CanCollide = false
-
-    if ray.Position and ray.Material and ray.Instance then
-        p.Position = ray.Position
-        p.BrickColor = ray.Instance.BrickColor
-        p.Material = ray.Material
-    else
-        print("There is not a point of collide")
-        p.Position = Vector3.new(0,0,0)
-    end
+        if ray.Position and ray.Material and ray.Instance then
+            p.Position = ray.Position
+            p.BrickColor = ray.Instance.BrickColor
+            p.Material = ray.Material
+        else
+            print("There is not a point of collide")
+            p.Position = Vector3.new(0,0,0)
+        end
     ]]--
 end
 
