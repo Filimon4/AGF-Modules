@@ -7,7 +7,7 @@
 local SmoothTestController = {}
 
 function SmoothTestController:Part()
-    local p = Instance.new('Part',game.Workspace)
+    local p = Instance.new('Part', game.Workspace)
     p.Anchored = true
     p.CanCollide = false
     p.Size = Vector3.new(2,2,2)

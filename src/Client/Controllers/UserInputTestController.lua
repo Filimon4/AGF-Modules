@@ -197,7 +197,7 @@ function UserInputTestController:Start()
     -- // Functions
 
     --self:HideMouse(UserInput)
-    self:Get(UserInput)
+    -- self:Get(UserInput)
     --self:Get_Preferred(UserInput)
     --self:Preferred_Changed(UserInput)
 
