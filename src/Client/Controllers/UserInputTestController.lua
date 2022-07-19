@@ -47,6 +47,7 @@ function UserInputTestController:Get(userinput)
 
     -- Methods of input
     self:MouseSettings(mouse)
+    --self:MobileSettings(mobile)
 end
 
 -- //
@@ -62,7 +63,7 @@ function UserInputTestController:MouseSettings(mouse)
     --self:LockInCenter(mouse)
     --self:Raycast(mouse)
     --self:RaycastFromXY(mouse)
-    --self:RaycastWithParams(mouse) -- in documentation there is methods Cast,CastWithIgnoreList and CastWithWhitelist. I will use Raycast methode, bsc it's just simpler
+    self:RaycastWithParams(mouse) -- in documentation there is methods Cast,CastWithIgnoreList and CastWithWhitelist. I will use Raycast methode, bsc it's just simpler
 
     -- //
 
@@ -118,6 +119,24 @@ function UserInputTestController:RaycastWithParams(mouse)
     -- print(ray.Distance)
     -- print(ray.Instance)
     -- print(ray.Material)
+    -- print(ray.Position)
+
+    --[[ Visual Point of collide the ray with a part
+
+    local p = Instance.new("Part", game.Workspace)
+    p.Size = Vector3.new(math.random(1, 2),math.random(1, 2),math.random(1, 2))
+    p.Anchored = true
+    p.CanCollide = false
+
+    if ray.Position and ray.Material and ray.Instance then
+        p.Position = ray.Position
+        p.BrickColor = ray.Instance.BrickColor
+        p.Material = ray.Material
+    else
+        print("There is not a point of collide")
+        p.Position = Vector3.new(0,0,0)
+    end
+    ]]--
 end
 
 function UserInputTestController:RaycastFromXY(mouse)
@@ -127,8 +146,8 @@ end
 
 function UserInputTestController:Raycast(mouse)
     local distance = 1000
-    local ray = mouse:GetRay(distance) -- return Origin position and Dirction of the ray
-
+	local ray = mouse:GetRay(distance) -- return Origin position and Dirction of the ray
+	
     --[[ Visual
     
     local Originpart = Instance.new('Part',game.Workspace)
