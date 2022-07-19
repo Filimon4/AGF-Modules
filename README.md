@@ -11,4 +11,5 @@ Modules:
       + [Fade](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/FadeTestController.lua)
     + Modules
       + [CameraShaker](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/CameraShakerTestController.lua)
+      + [Smooth](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/SmoothTestController.lua)
 3. Shared Modules

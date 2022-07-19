@@ -63,7 +63,7 @@ function UserInputTestController:MouseSettings(mouse)
     --self:LockInCenter(mouse)
     --self:Raycast(mouse)
     --self:RaycastFromXY(mouse)
-    self:RaycastWithParams(mouse) -- in documentation there is methods Cast,CastWithIgnoreList and CastWithWhitelist. I will use Raycast methode, bsc it's just simpler
+    --self:RaycastWithParams(mouse) -- in documentation there is methods Cast,CastWithIgnoreList and CastWithWhitelist. I will use Raycast methode, bsc it's just simpler
 
     -- //
 
