@@ -40,7 +40,8 @@ function SmoothTestController:SmoothExample()
     -- //
 
     Mouse.LeftDown:Connect(function() -- Event will be call when the left mouse button is pressed
-        local ray = RaycastPosition()
+        local ray = RaycastPosition() -- return position(Vector3)
+
         if ray then
             local Smooth = SmoothModule.new(Part.Position, 0.5) -- smooth init
 
