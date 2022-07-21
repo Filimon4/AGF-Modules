@@ -29,7 +29,7 @@ end
 function MaidTestService:Start()
 	task.wait(6)
     local Maid = self.Shared.Maid
-    self:Example(Maid)
+    --self:Example(Maid)
 end
 
 
