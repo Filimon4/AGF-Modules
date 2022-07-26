@@ -45,7 +45,7 @@ function PromiseTestService:Start()
 	local Promise = self.Shared.Promise
     local Tween = game:GetService("TweenService")
     local TweenObj = self:CreatePart()
-    self:PromiseNew(Promise,Tween,TweenObj)
+    --self:PromiseNew(Promise,Tween,TweenObj)
 end
 
 
