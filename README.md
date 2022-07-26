@@ -16,5 +16,5 @@ Modules:
       + [Tween](https://github.com/Filimon4/AGF-Modules/blob/main/src/Client/Controllers/TweenTestController.lua)
 3. Shared Modules
     + [Maid](https://github.com/Filimon4/AGF-Modules/blob/main/src/Server/Services/MaidTestService.lua)
-    + [Promise]((https://github.com/Filimon4/AGF-Modules/blob/main/src/Server/Services/PromiseTestService.lua)) 
+    + [Promise](https://github.com/Filimon4/AGF-Modules/blob/main/src/Server/Services/PromiseTestService.lua) 
     + Signal (in progress...)
