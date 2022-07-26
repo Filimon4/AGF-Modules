@@ -6,7 +6,7 @@
 
 local PromiseTestService = {Client = {}}
 
-function PromiseTestService:ExampleNew(Promise,Tween,TweenObj)
+function PromiseTestService:PromiseNew(Promise,Tween,TweenObj)
     local function tween(obj,Tweenifno, pops)
         return Promise.new(function(resolve,reject,onCancel)
             local tween = Tween:Create(obj,Tweenifno,pops)
@@ -20,13 +20,13 @@ function PromiseTestService:ExampleNew(Promise,Tween,TweenObj)
         end)
     end
 
-    local promis = tween(TweenObj, TweenInfo.new(2),{Position = Vector3.zero}):andThen(function()
+    local promis = tween(TweenObj, TweenInfo.new(2),{Position = Vector3.zero}):finally(function()
         print("done")
     end)
 
     task.wait(4)
     promis:cancel()
-    print('Tween was fine')
+    print('Tween is fine')
 end
 
 function PromiseTestService:CreatePart()
@@ -45,7 +45,7 @@ function PromiseTestService:Start()
 	local Promise = self.Shared.Promise
     local Tween = game:GetService("TweenService")
     local TweenObj = self:CreatePart()
-    self:ExampleNew(Promise,Tween,TweenObj)
+    self:PromiseNew(Promise,Tween,TweenObj)
 end
 
 
